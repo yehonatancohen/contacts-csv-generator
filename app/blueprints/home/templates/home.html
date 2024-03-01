@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{{ url_for('home.static', filename='home.css') }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask File Upload</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Upload Text and File to Flask</h1>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <div>
+                <label for="textInput">Enter Text:</label>
+                <input type="text" id="textInput" name="text">
+            </div>
+            <div>
+                <label for="numberInput">Enter Number:</label>
+                <input type="number" id="numberInput" name="number">
+            </div>
+            <div>
+                <label for="fileInput">Upload File:</label>
+                <input type="file" id="fileInput" name="file">
+            </div>
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+    <script src="{{ url_for('home.static', filename='home.js') }}"></script>
+</body>
+</html>
