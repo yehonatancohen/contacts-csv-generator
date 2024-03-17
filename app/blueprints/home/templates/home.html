@@ -1,25 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
 <link rel="stylesheet" href="{{ url_for('home.static', filename='home.css') }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flask File Upload</title>
+    <title>המרת קבצים</title>
 </head>
 <body>
     <div class="container">
-        <h1>Upload Text and File to Flask</h1>
-        <form id="uploadForm" enctype="multipart/form-data">
+        <h1>המרת קבצים</h1>
+        <form action="{{ url_for('home.upload_files') }}" id="uploadForm" enctype="multipart/form-data", method="post">
             <div>
-                <label for="textInput">Enter Text:</label>
-                <input type="text" id="textInput" name="text">
+                <label for="textInput">תוספת לשם:</label>
+                <input type="text" id="prefix" name="prefix" placeholder="לדוגמה P...">
             </div>
             <div>
-                <label for="numberInput">Enter Number:</label>
-                <input type="number" id="numberInput" name="number">
+                <label for="textInput">כמות אנשים בחלוקה:</label>
+                <input type="text" id="groupSize" name="groupSize" placeholder="ברירת מחדל 50">
             </div>
             <div>
-                <label for="fileInput">Upload File:</label>
+                <label for="longText">מספרי טלפון (אופציונלי)</label>
+                <textarea id="phoneNumbers" name="phoneNumbers" rows="10" cols="50" placeholder="עם פסיקים בניהם"></textarea>
+            </div>
+            <div>
+                <label for="fileInput">קובץ מספרי טלפון:</label>
                 <input type="file" id="fileInput" name="file">
             </div>
             <button type="submit">Upload</button>

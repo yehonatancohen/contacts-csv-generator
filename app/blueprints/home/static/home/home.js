@@ -1,7 +1,7 @@
 const fileUpload = document.getElementById('uploadForm');
 fileUpload.addEventListener('change', uploadImage);
 
-document.getElementById('uploadForm').addEventListener('submit', function(event) {
+/*document.getElementById('uploadForm').addEventListener('submit', function(event) {
     event.preventDefault();
     var formData = new FormData(this);
     
@@ -18,7 +18,7 @@ document.getElementById('uploadForm').addEventListener('submit', function(event)
         console.error('Error:', error);
         alert('Error uploading data!');
     });
-});
+});*/
 
 function uploadImage(event)
 {

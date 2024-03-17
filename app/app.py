@@ -1,7 +1,6 @@
 from flask import Flask, render_template
 from flask_login import LoginManager
 import sqlite3, os
-import database as db
 #from util.decorators import guest_required 
 from blueprints.home.home import home
 #from blueprints.polls.polls import polls

@@ -31,7 +31,3 @@ def convert_phone_numbers(file_path):
             converted_numbers.append('+972' + number)
 
     return converted_numbers
-
-if __name__ == "__main__":
-    file_path = 'HARLEM-independence After Party-Approved participants.xlsx'  # Replace with the actual file path
-    convert_phone_numbers(file_path)

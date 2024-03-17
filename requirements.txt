@@ -1,1 +1,4 @@
 csvmeta
+flask
+flask-login
+pandas
